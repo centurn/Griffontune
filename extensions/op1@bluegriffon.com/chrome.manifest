@@ -1,0 +1,4 @@
+locale    op1    en-US    chrome/op1-en-US/locale/en-US/op1/
+overlay   chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://op1/content/op1Overlay.xul
+content   op1          chrome/op1/content/op1/
+skin      op1         classic/1.0 chrome/op1/skin/classic/op1/

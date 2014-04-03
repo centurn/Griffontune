@@ -1,0 +1,4 @@
+skin      domexplorer         classic/1.0 domexplorer/skin/classic/domexplorer/
+style     chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://domexplorer/skin/domexplorerOverlay.css
+overlay   chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://domexplorer/content/domexplorerOverlay.xul
+content   domexplorer          domexplorer/content/domexplorer/

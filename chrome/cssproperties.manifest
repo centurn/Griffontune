@@ -1,0 +1,3 @@
+overlay   chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://cssproperties/content/csspropertiesOverlay.xul
+content   cssproperties          cssproperties/content/cssproperties/
+skin      cssproperties         classic/1.0 cssproperties/skin/classic/cssproperties/

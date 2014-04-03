@@ -1,0 +1,4 @@
+content   fs          chrome/fs/content/fs/
+skin    fs    classic/1.0 chrome/fs/skin/classic/fs/
+locale    fs    en-US    chrome/fs-en-US/locale/en-US/fs/
+overlay   chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://fs/content/fsOverlay.xul

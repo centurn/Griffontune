@@ -1,0 +1,4 @@
+overlay	chrome://bluegriffon/content/xul/bluegriffon.xul	chrome://svg-edit/content/svg-edit-overlay.xul
+skin      svg-edit        classic/1.0       chrome/svg-edit/skin/
+content   svg-edit         chrome/svg-edit/content/
+style  chrome://global/content/customizeToolbar.xul    chrome://svg-edit/skin/svg-edit-overlay.css

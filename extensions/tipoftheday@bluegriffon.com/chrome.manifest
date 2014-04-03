@@ -1,0 +1,3 @@
+overlay chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://tipoftheday/content/tipofthedayOverlay.xul
+content tipoftheday                       chrome/tipoftheday/content/tipoftheday/
+locale  tipoftheday              en-US    chrome/tipoftheday-en-US/locale/en-US/tipoftheday/

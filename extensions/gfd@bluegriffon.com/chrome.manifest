@@ -1,0 +1,4 @@
+skin    gfd    classic/1.0 chrome/gfd/skin/classic/gfd/
+content   gfd          chrome/gfd/content/gfd/
+locale    gfd    en-US    chrome/gfd-en-US/locale/en-US/gfd/
+overlay   chrome://bluegriffon/content/xul/bluegriffon.xul    chrome://gfd/content/gfdOverlay.xul

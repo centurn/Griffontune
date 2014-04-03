@@ -1,0 +1,4 @@
+overlay chrome://bluegriffon/content/xul/bluegriffon.xul chrome://templatesmanager/content/templatesManagerOverlay.xul
+skin      templatesmanager  classic/1.0       chrome/templatesmanager/skin/
+content   templatesmanager         chrome/templatesmanager/content/
+locale  templatesmanager   en-US       chrome/templatesmanager-locale/locale/en-US/

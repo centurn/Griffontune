@@ -1,0 +1,75 @@
+<?xml version="1.0"?> <!-- -*- Mode: HTML -*- --> 
+
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?> 
+<?xml-stylesheet href="chrome://bluegriffon/skin/aboutDialog.css" type="text/css"?> 
+
+<!DOCTYPE dialog [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd" >
+%brandDTD;
+<!ENTITY % aboutDialogDTD SYSTEM "chrome://bluegriffon/locale/aboutDialog.dtd" >
+%aboutDialogDTD;
+]>
+
+    
+<dialog xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="aboutDialog"
+        buttons=","
+        windowtype="BlueGriffon:About"
+        title="&aboutDialog.title;"
+        onload="Startup()"
+        persist="screenX screenY width height">
+
+  <script type="application/x-javascript" src="chrome://bluegriffon/content/utils/global.js"/>
+  <script type="application/x-javascript" src="chrome://bluegriffon/content/dialogs/aboutDialog.js"/>
+
+  <tabbox flex="1">
+    <tabs>
+      <tab label="&aboutTab.label;"/>
+      <tab label="&creditsTab.label;"/>
+      <tab label="&buildConfigTab.label;"/>
+    </tabs>
+    <tabpanels flex="1">
+      <vbox flex="1">
+        <hbox>
+          <spacer flex="1"/>
+          <image src="chrome://bluegriffon/skin/about-logo.png"/>
+          <spacer flex="1"/>
+        </hbox>
+  
+        <hbox>
+          <spacer flex="1"/>
+          <label id="version" value="&aboutVersion; 1.7.2.99.20130729"/>
+          <spacer flex="1"/>
+        </hbox>
+  
+        <hbox>
+          <spacer flex="1"/>
+          <label id="build" value="Build 20140403134844"/>
+          <spacer flex="1"/>
+        </hbox>
+  
+        <hbox>
+          <spacer flex="1"/>
+          <label id="codename" value="&codeName; 'Cla-de-Lue'"/>
+          <spacer flex="1"/>
+        </hbox>
+  
+        <hbox>
+          <spacer flex="1"/>
+          <description id="copyright">&copyrightText;</description>
+          <spacer flex="1"/>
+        </hbox>
+
+        <vbox id="detailsBox" align="center" flex="1">
+          <description id="userAgent"/>
+        </vbox>
+      </vbox>
+      <iframe flex="1" id="iframe"/>
+      <iframe flex="1" src="about:buildconfig"/>
+    </tabpanels>
+  </tabbox>
+</dialog>
+

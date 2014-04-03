@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width; user-scalable=false;">
+  <title>about:buildconfig</title>
+  <link rel="stylesheet" href="chrome://global/skin/about.css" type="text/css">
+  <style type="text/css">
+    th { text-align: start; }
+    h2 { margin-top: 1.5em; }
+    th, td { vertical-align: top; }
+  </style>
+</head>
+<body class="aboutPageWideContainer">
+<h1>about:buildconfig</h1>
+<h2>Build Machine</h2>
+<p>STOLYAROV-LAPTO</p>
+<h2>Source</h2>
+<p>Built from <a href="http://hg.mozilla.org/mozilla-central/rev/9db46ddfb517">http://hg.mozilla.org/mozilla-central/rev/9db46ddfb517</a></p>
+<h2>Build platform</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>target</th>
+    </tr>
+    <tr>
+      <td>i686-pc-mingw32</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Build tools</h2>
+<table>
+  <tbody>
+    <tr>
+      <th>Compiler</th>
+      <th>Version</th>
+      <th>Compiler flags</th>
+    </tr>
+    <tr>
+      <td>c:/Temp/bin/opt/official1.7/_virtualenv/Scripts/python.exe -O c:/Temp/grifsrc/mozilla-2.0/build/cl.py cl</td>
+      <td>16.00.30319.01</td>
+      <td> -TC -nologo -W3 -Gy -Fdgenerated.pdb -wd4244 -wd4819 -we4553  -DNDEBUG -DTRIMMED -Zi -UDEBUG -DNDEBUG -O1 -Oy</td>
+    </tr>
+    <tr>
+      <td>c:/Temp/bin/opt/official1.7/_virtualenv/Scripts/python.exe -O c:/Temp/grifsrc/mozilla-2.0/build/cl.py cl</td>
+      <td>16.00.30319.01</td>
+      <td> -wd4099 -TP -nologo -W3 -Gy -Fdgenerated.pdb -wd4251 -wd4244 -wd4345 -wd4351 -wd4482 -wd4800 -wd4819 -we4553 -GR-  -DNDEBUG -DTRIMMED -Zi -UDEBUG -DNDEBUG -O1 -Oy </td>
+    </tr>
+  </tbody>
+</table>
+<h2>Configure arguments</h2>
+<p>--enable-application=bluegriffon --enable-optimize --disable-debug --disable-webgl --disable-gamepad --disable-tests --disable-javaxpcom --disable-activex --disable-activex-scripting --disable-crashreporter --enable-jemalloc --enable-webm --disable-webrtc --disable-dbm --disable-updater --disable-update-packaging</p>
+</body>
+</html>
