@@ -1571,7 +1571,7 @@
               <label value="&replace.label;"/>
               <textbox id="bespinReplaceTextbox"
                        onkeypress="BespinKeyPressCallback(event);"
-                       size="10"
+                       size="100"
                        type="search"/>
             </hbox>
             <hbox id="bespinToolbox1" align="center" hidden="true">
@@ -1601,7 +1601,7 @@
                         oncommand="ToggleBespinFindCaseSensitivity()"/>
               <label value="&find.label;"/>
               <textbox id="bespinFindTextbox"
-                       size="10"
+                       size="100"
                        type="search"
                        oncommand="onBespinFindClear(event, this)"
                        onkeypress="BespinKeyPressCallback(event); onBespinFindKeypress(event)"
