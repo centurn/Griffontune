@@ -426,6 +426,7 @@ var ComposerCommands = {
     commandTable.registerCommand("cmd_ConvertToTable",       bgConvertToTable);
 
     commandTable.registerCommand("cmd_image",       cmdInsertImageCommand);
+    commandTable.registerCommand("cmd_image2",      cmdInsertImage2Command);
     commandTable.registerCommand("cmd_anchor",      cmdInsertAnchorCommand);
     commandTable.registerCommand("cmd_link",        cmdInsertLinkCommand);
     commandTable.registerCommand("cmd_hr",          cmdInsertHRCommand);
@@ -1728,6 +1729,28 @@ var cmdInsertImageCommand =
                   ? EditorUtils.getObjectForProperties(["img"])
                   : null;
     window.openDialog("chrome://bluegriffon/content/dialogs/insertImage.xul","_blank",
+                      "chrome,modal,titlebar,resizable=yes,dialog=yes", element, null);
+  }
+};
+
+var cmdInsertImage2Command =
+{
+  isCommandEnabled: function(aCommand, dummy)
+  {
+    return (EditorUtils.getCurrentEditorElement() &&
+            EditorUtils.isDocumentEditable() &&
+            EditorUtils.isEditingRenderedHTML());
+  },
+
+  getCommandStateParams: function(aCommand, aParams, aRefCon) {},
+  doCommandParams: function(aCommand, aParams, aRefCon) {},
+
+  doCommand: function(aCommand)
+  {
+    var element = (GetCurrentViewMode() == "wysiwyg")
+                  ? EditorUtils.getObjectForProperties(["img"])
+                  : null;
+    window.openDialog("chrome://bluegriffon/content/dialogs/insertImage2.xul","_blank",
                       "chrome,modal,titlebar,resizable=yes,dialog=yes", element, null);
   }
 };

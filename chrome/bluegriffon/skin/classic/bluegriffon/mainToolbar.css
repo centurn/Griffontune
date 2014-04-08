@@ -65,6 +65,10 @@
   list-style-image: url("chrome://bluegriffon/skin/mainToolbar/image.png");
 }
 
+#imageButton2 {
+  list-style-image: url("chrome://bluegriffon/skin/mainToolbar/image.png");
+}
+
 #anchorButton {
   list-style-image: url("chrome://bluegriffon/skin/mainToolbar/anchor.png");
 }

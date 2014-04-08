@@ -180,6 +180,7 @@
   <command id="cmd_list"             oncommand="goDoCommand('cmd_list')"/>
   <command id="cmd_table"            oncommand="goDoCommand('cmd_table')"/>
   <command id="cmd_image"            oncommand="goDoCommand('cmd_image')"/>
+  <command id="cmd_image2"            oncommand="goDoCommand('cmd_image2')"/>
   <command id="cmd_anchor"           oncommand="goDoCommand('cmd_anchor')"/>
   <command id="cmd_link"             oncommand="goDoCommand('cmd_link')"/>
   <command id="cmd_hr"               oncommand="goDoCommand('cmd_hr')"/>
@@ -792,6 +793,9 @@
         <menuitem label="&imageToolbarCmd.label;"
                   command="cmd_image"
                   accesskey="&imageToolbarCmd.key;"/>
+        <menuitem label="Insert image 2"
+                  command="cmd_image2"
+                  accesskey="&imageToolbarCmd.key;"/>
         <menuitem label="&tableToolbarCmd.label;"
                   command="cmd_InsertTable"
                   accesskey="&tableToolbarCmd.key;"/>
@@ -1097,6 +1101,10 @@
                      label="&imageToolbarCmd.label;" command="cmd_image"
                      tooltiptext="&imageToolbarCmd.tooltip;"/>
 
+      <toolbarbutton id="imageButton2" class="toolbarbutton-1"
+                     label="Insert image 2" command="cmd_image2"
+                     tooltiptext="Insert image from yandex"/>
+
       <toolbarbutton id="anchorButton" class="toolbarbutton-1"
                      label="&anchorToolbarCmd.label;" command="cmd_anchor"
                      tooltiptext="&anchorToolbarCmd.tooltip;"/>
@@ -1223,7 +1231,7 @@
              iconsize="small"
              mode="icons"
              customizable="true"
-             defaultset="newButton,spacer,openButton,spacer,saveButton,stopButton,spacer,tableButton,tableLayoutButton,imageButton,thumbnailButton,anchorButton,linkButton,domexplorerButton,cssButton,csseditorButton,svgEditMainToolbarButton,videoButton,audioButton,formButton,mathmlButton,its20Button,spacer,browseButton,spring,throbber-box,spacer"/>
+             defaultset="newButton,spacer,openButton,spacer,saveButton,stopButton,spacer,tableButton,tableLayoutButton,imageButton,imageButton2,thumbnailButton,anchorButton,linkButton,domexplorerButton,cssButton,csseditorButton,svgEditMainToolbarButton,videoButton,audioButton,formButton,mathmlButton,its20Button,spacer,browseButton,spring,throbber-box,spacer"/>
     <toolbarset id="customMainToolbars" context="main-toolbar-context-menu"/>
   </toolbox>
 
