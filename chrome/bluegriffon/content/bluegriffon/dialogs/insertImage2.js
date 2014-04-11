@@ -101,8 +101,8 @@ function LoadImage()
 function UpdateButtons()
 {
   var url = gDialog.imageURLTextbox.value;
-  var ok = (gDialog.imageURLTextbox.value && 
-    url.substring(url.length - 7) == "_XL.jpg");
+  var ok = (url && 
+    url.substring(url.length - 7) == "_XL.jpg" || url.substring(url.length - 7) == "_XL.png");
 
   SetEnabledElement(document.documentElement.getButton("accept"), ok);
 }
