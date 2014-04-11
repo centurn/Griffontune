@@ -77,6 +77,7 @@ function onAccept()
     imgElement.setAttribute("src", url);
     imgElement.setAttribute("border", "0");
     imgElement.setAttribute("alt", altText);
+    imgElement.setAttribute("style", "border-width: 1px; border-style: solid;");
     if (title)
       imgElement.setAttribute("title", title);
     if (isWysiwyg) 
