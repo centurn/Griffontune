@@ -51,9 +51,9 @@
     </grid>
   </vbox>
 
-  <groupbox width="400" height="300">
+  <groupbox width="500" height="333">
     <caption label="&preview.label;"/>
-    <box id="previewImage"  flex="1" width="400" height="300"/>
+    <box id="previewImage"  flex="1" width="500" height="333"/>
   </groupbox>
 
 </dialog>

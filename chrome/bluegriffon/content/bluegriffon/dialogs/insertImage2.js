@@ -37,17 +37,18 @@ function Startup()
 function onAccept()
 {
   // general
-  var url = gDialog.imageURLTextbox.value;
+  var url = GetURLBase();
   var title = gDialog.titleTextbox.value;
   var altText = gDialog.alternateTextTextbox.value;
 
-  var urlOrig = url.substring(0, url.length - 7) + "_orig";
+  var urlOrig = url + "_orig";
+  var urlJpg = url + "_XL.jpg";
 
   var isWysiwyg = (EditorUtils.getCurrentViewMode() == "wysiwyg");
   var editor = EditorUtils.getCurrentEditor(); 
   if (gNode && isWysiwyg) {
     editor.beginTransaction();
-    editor.setAttribute(gNode, "src", url);
+    editor.setAttribute(gNode, "src", urlJpg);
     if (altText)
       editor.setAttribute(gNode, "alt", altText);
     else
@@ -74,7 +75,7 @@ function onAccept()
 
     spanElement.appendChild(imgElement);
 
-    imgElement.setAttribute("src", url);
+    imgElement.setAttribute("src", urlJpg);
     imgElement.setAttribute("border", "0");
     imgElement.setAttribute("alt", altText);
     imgElement.setAttribute("style", "border-width: 1px; border-style: solid;");
@@ -90,19 +91,33 @@ function onAccept()
   }
 }
 
+function GetURLBase()
+{
+    var url = gDialog.imageURLTextbox.value;
+    if(url.substring(url.length - 2) == "_S")
+        return url.substring(0, url.length - 2);
+    if(url.substring(url.length - 7) == "_XL.jpg")
+        return url.substring(0, url.length - 7);
+
+    return url;
+}
+
 
 function LoadImage()
 {
+  var url = GetURLBase();
+  var urlJpg = url + "_L.jpg";
+
   gDialog.previewImage.style.backgroundImage = 'url("' +
-    UrlUtils.makeAbsoluteUrl(gDialog.imageURLTextbox.value.trim()) + '")';
+    UrlUtils.makeAbsoluteUrl(urlJpg.trim()) + '")';
   UpdateButtons();
 }
 
 function UpdateButtons()
 {
   var url = gDialog.imageURLTextbox.value;
-  var ok = (url && 
-    url.substring(url.length - 7) == "_XL.jpg" || url.substring(url.length - 7) == "_XL.png");
+  var ok = (url && url.length > 7 &&
+    (url.substring(url.length - 2) == "_S" || url.substring(url.length - 7) == "_XL.jpg" ) );
 
   SetEnabledElement(document.documentElement.getButton("accept"), ok);
 }
@@ -117,7 +132,8 @@ function InitDialog()
   if (!gNode)
     return;
 
-  gDialog.imageURLTextbox.value = gNode.getAttribute("src");
+  var url = gNode.getAttribute("src");
+  gDialog.imageURLTextbox.value = url;
   LoadImage();
   gDialog.titleTextbox.value = gNode.getAttribute("title");
   gDialog.alternateTextTextbox.value = gNode.getAttribute("alt");

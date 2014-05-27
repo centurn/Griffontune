@@ -3,9 +3,9 @@ tabpanels {
 }
 
 #previewImage {
-  height: 300px;
+  height: 333px;
   max-height: 600px;
-  width: auto;
+  width: 500px;
 }
 
 #relativeURLCheckboxWarning {
