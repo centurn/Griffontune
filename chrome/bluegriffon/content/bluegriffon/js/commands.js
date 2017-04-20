@@ -2335,7 +2335,7 @@ var cmdCopyHTMLCodeCommand = {
     var mimeType = EditorUtils.getCurrentDocument().contentType;
 
     var flags = 1 << 1; // OutputFormatted
-    flags |= 1 << 5; // OutputWrap
+//    flags |= 1 << 5; // OutputWrap
     flags |= 1 << 10; // OutputLF
 
     var source = selection.toStringWithFormat(mimeType,
